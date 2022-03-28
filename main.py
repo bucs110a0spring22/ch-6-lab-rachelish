@@ -32,8 +32,8 @@ def graph(upper_bound):
       turtle.write(string)
       max_iteration = upper_bound
       screen = turtle.setworldcoordinates(0, 0, i+10, max_so_far+10)
-      turtle.pd()
-      turtle.goto(max_so_far)
+    turtle.pd()
+    turtle.goto(result, max_so_far)
   turtle.exitonclick()
   
 
