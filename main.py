@@ -19,22 +19,26 @@ def seq3np1(n):
     #return seq3np1(n) ???
 def graph(upper_bound):
   frank = turtle.Turtle()
-  turtle_two = turtle.Turtle()
+  sid = turtle.Turtle()
   wn = turtle.Screen() 
-  screen = turtle.setworldcoordinates(0, 0, 10, 10)
+  wn.setworldcoordinates(0, 0, 10, 10)
   max_so_far = 0
   string = ""
+  sid.pu()
+  sid.goto(0, 10)
   for i in range(1, upper_bound+1):
-    result = seq3np1(upper_bound)
+    result = seq3np1(i)
     if result > max_so_far:
-      string = "Maximum so far: ", i, result
       max_so_far=result
-      turtle.write(string)
-      max_iteration = upper_bound
-      screen = turtle.setworldcoordinates(0, 0, i+10, max_so_far+10)
-    turtle.pd()
-    turtle.goto(result, max_so_far)
-  turtle.exitonclick()
+    sid.goto(0, max_so_far)
+    string = "Maximum so far: ", i, result
+    sid.clear()
+    sid.write(string)
+    #max_iteration = upper_bound
+    wn.setworldcoordinates(0, 0, i+10, max_so_far+10)
+    frank.pd()
+    frank.goto(i, result)
+  wn.exitonclick()
   
 
   
