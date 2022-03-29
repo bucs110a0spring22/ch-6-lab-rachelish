@@ -17,13 +17,14 @@ def seq3np1(n):
    # print(n)                  # the last print is 1
     return count
     #return seq3np1(n) ???
+
 def graph(upper_bound):
   frank = turtle.Turtle()
   sid = turtle.Turtle()
   wn = turtle.Screen() 
   wn.setworldcoordinates(0, 0, 10, 10)
   max_so_far = 0
-  string = ""
+  #string = ""
   sid.pu()
   sid.goto(0, 10)
   for i in range(1, upper_bound+1):
@@ -31,7 +32,7 @@ def graph(upper_bound):
     if result > max_so_far:
       max_so_far=result
     sid.goto(0, max_so_far)
-    string = "Maximum so far: ", i, result
+    string = 'Maximum so far: ', i, result
     sid.clear()
     sid.write(string)
     #max_iteration = upper_bound
@@ -39,8 +40,6 @@ def graph(upper_bound):
     frank.pd()
     frank.goto(i, result)
   wn.exitonclick()
-  
-
   
 def main():
   upper_bound = int(input("Please input an upper bound number. Must be positive: "))
